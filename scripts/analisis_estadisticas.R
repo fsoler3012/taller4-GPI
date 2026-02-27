@@ -11,7 +11,7 @@ table(D$presencia_hemorragia)
 
 # Resumen por tipo de catéter
 aggregate(cbind(tiempo_duracion_min, volumen_hemorragia) ~ tipo_cateter,
-          data = D, FUN = unction(x) c(mean=mean(x,na.rm=TRUE),
+          data = D, FUN = function(x) c(mean=mean(x,na.rm=TRUE),
                                         sd=sd(x,na.rm=TRUE),
                                         med=median(x,na.rm=TRUE)))
 
