@@ -91,9 +91,11 @@ slope_simple <- function(mat, yl, main_txt) {
   axis(1, at = 1:2, labels = keep_cols)
   # líneas + puntos
   for (i in seq_len(nrow(mat))) {
-    segments(1, mat[i, 1], 2, mat[i, 2], col = "orange", lwd = 2)
-    points(1, mat[i, 1], pch = 16, col = "yellow")
-    points(2, mat[i, 2], pch = 16, col = "green")
+
+    segments(1, mat[i, 1], 2, mat[i, 2], col = "brown", lwd = 2)
+    points(1, mat[i, 1], pch = 16, col = "cyan")
+    points(2, mat[i, 2], pch = 16, col = "purple")
+
   }
   # Etiquetas de instituciones a la derecha (y a la izquierda si quieres)
   text(2.05, mat[, 2], labels = rownames(mat), cex = 0.75, adj = 0)
