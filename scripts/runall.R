@@ -1,0 +1,5 @@
+source('scripts/simulate_clinical_data.R')
+source('scripts/Directory_Data.R')
+source('scripts/Experiment_Clinical_Data.R')
+source('scripts/Institution_Historic_Records.R')
+source('scripts/Clean_Sample_Clinical_Results.R')
