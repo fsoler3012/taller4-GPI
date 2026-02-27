@@ -1,0 +1,40 @@
+Linear model: tiempo_duracion_min ~ tipo_cateter + periodo + id_institucion
+
+
+Call:
+lm(formula = tiempo_duracion_min ~ tipo_cateter + periodo + id_institucion, 
+    data = D)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-54.307 -13.429  -1.952  12.519  53.926 
+
+Coefficients: (1 not defined because of singularities)
+                         Estimate Std. Error t value Pr(>|t|)    
+(Intercept)             100.49444    2.72646  36.859  < 2e-16 ***
+tipo_catetersin mejoras  11.53500    2.49884   4.616 5.48e-06 ***
+tipo_catetersin_mejoras  11.23750    2.98669   3.763 0.000197 ***
+periodoMay-Jun                 NA         NA      NA       NA    
+id_institucion2           2.27778    2.81587   0.809 0.419113    
+id_institucion3           0.40000    2.81587   0.142 0.887120    
+id_institucion4           0.04444    2.81587   0.016 0.987416    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 18.89 on 354 degrees of freedom
+Multiple R-squared:  0.06289,	Adjusted R-squared:  0.04966 
+F-statistic: 4.752 on 5 and 354 DF,  p-value: 0.0003242
+
+
+ANOVA table (sequential):
+Analysis of Variance Table
+
+Response: tiempo_duracion_min
+                Df Sum Sq Mean Sq F value    Pr(>F)    
+tipo_cateter     2   8163  4081.3 11.4382 1.536e-05 ***
+id_institucion   3    315   104.9  0.2941    0.8297    
+Residuals      354 126311   356.8                      
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Note: id_institucion is included as a fixed effect (many dummies). For partial pooling, consider mixed models (lme4::lmer).
