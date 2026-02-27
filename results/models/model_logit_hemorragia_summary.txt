@@ -1,0 +1,53 @@
+Logistic model: hemo_bin ~ tipo_cateter + periodo + id_institucion
+
+
+Call:
+glm(formula = hemo_bin ~ tipo_cateter + periodo + id_institucion, 
+    family = binomial(link = "logit"), data = D)
+
+Coefficients: (1 not defined because of singularities)
+                        Estimate Std. Error z value Pr(>|z|)    
+(Intercept)             -2.16247    0.43649  -4.954 7.26e-07 ***
+tipo_catetersin mejoras  0.06238    0.38338   0.163    0.871    
+tipo_catetersin_mejoras  0.60568    0.42298   1.432    0.152    
+periodoMay-Jun                NA         NA      NA       NA    
+id_institucion2          0.65919    0.41449   1.590    0.112    
+id_institucion3          0.44379    0.42554   1.043    0.297    
+id_institucion4          0.10050    0.44858   0.224    0.823    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 317.89  on 359  degrees of freedom
+Residual deviance: 311.57  on 354  degrees of freedom
+AIC: 323.57
+
+Number of Fisher Scoring iterations: 4
+
+
+Likelihood-ratio test vs. null model:
+Analysis of Deviance Table
+
+Model: binomial, link: logit
+
+Response: hemo_bin
+
+Terms added sequentially (first to last)
+
+
+               Df Deviance Resid. Df Resid. Dev Pr(>Chi)
+NULL                             359     317.89         
+tipo_cateter    2   2.9407       357     314.94   0.2298
+periodo         0   0.0000       357     314.94         
+id_institucion  3   3.3770       354     311.57   0.3371
+
+Exponentiated coefficients (odds ratios) with Wald 95% CI:
+                     term        OR     CI_low   CI_high
+1             (Intercept) 0.1150409 0.04889945 0.2706455
+2 tipo_catetersin mejoras 1.0643641 0.50205775 2.2564555
+3 tipo_catetersin_mejoras 1.8324935 0.79982640 4.1984514
+4          periodoMay-Jun        NA         NA        NA
+5         id_institucion2 1.9332351 0.85794991 4.3561959
+6         id_institucion3 1.5585982 0.67687471 3.5888891
+7         id_institucion4 1.1057253 0.45899868 2.6636861
